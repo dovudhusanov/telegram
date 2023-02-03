@@ -27,8 +27,8 @@ function Auth() {
         const { username, password, phoneNumber, avatarURL } = form;
 
         // const URL = 'http://localhost:5000/auth';
-        // const URL = 'http://192.168.0.161:5000/auth';
-        const URL = 'https://telegram-apezon.vercel.app/auth';
+        // const URL = 'https://medical-pager.herokuapp.com/auth';
+        const URL = 'https://telegram-apezon-backend.vercel.app/auth';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSingUp ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
